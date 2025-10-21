@@ -106,3 +106,6 @@
     // createLanguageSwitcher();
   }
 })();
+  // Uncomment the line below to show language switcher for testing
+   createLanguageSwitcher();
+});
