@@ -105,7 +105,10 @@
     // Uncomment the line below to show language switcher for testing
     // createLanguageSwitcher();
   }
+
+  // Expose functions globally for console access and manual control
+  window.detectLanguageFromURL = detectLanguageFromURL;
+  window.updateTranslation = updateTranslation;
+  window.createLanguageSwitcher = createLanguageSwitcher;
+  window.currentLang = currentLang;
 })();
-  // Uncomment the line below to show language switcher for testing
-   createLanguageSwitcher();
-});
