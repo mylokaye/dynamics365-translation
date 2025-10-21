@@ -8,8 +8,9 @@ Add these script tags to your HTML (in this exact order):
 
 ```html
 <!-- Load translations.js FIRST, then translate.js -->
-<script src="https://cdn.jsdelivr.net/gh/mylokaye/dynamics365-translation@main/translations.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/mylokaye/dynamics365-translation@main/translate.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/mylokaye/dynamics365-translation@main/translations.js" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/mylokaye/dynamics365-translation@main/translate.js" defer></script>
+
 ```
 
 The translation runs automatically on page load. To manually trigger it, you can call:
