@@ -16,7 +16,16 @@ The translation runs automatically on page load. To manually trigger it, you can
 ```javascript
 updateTranslation();
 ```
-
+```html
+<script>
+  window.addEventListener('load', function() {
+    if (typeof updateTranslation === 'function') {
+      updateTranslation();
+    }
+  });
+</script>
+</body>
+```
 
 Console test script:
 ```html
