@@ -1,0 +1,14 @@
+{
+  "en": {
+    "title": "Welcome",
+    "intro": "Hello"
+  },
+  "de": {
+    "title": "Willkommen",
+    "intro": "Hallo"
+  },
+  "zh": {
+    "title": "欢迎",
+    "intro": "你好"
+  }
+}
