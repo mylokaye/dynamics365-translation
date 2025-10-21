@@ -1,0 +1,33 @@
+
+const languages = ["EN-US", "DE", "ZH"];
+let currentLangIndex = 0;
+const originalText = {};
+
+function updateTranslation() {
+  const lang = languages[currentLangIndex];
+  for (const key in translations) {
+    const el = document.querySelector(`[data-i18n='${key}']`);
+    if (!el) continue;
+    if (!originalText[key]) originalText[key] = el.textContent;
+    el.textContent = lang === "EN-US" ? originalText[key] : translations[key][lang];
+  }
+}
+
+function createToggleButton() {
+  const btn = document.createElement('button');
+  btn.textContent = "🌐";
+  btn.title = "Switch Language";
+  btn.style.position = "fixed";
+  btn.style.top = "10px";
+  btn.style.right = "10px";
+  btn.style.zIndex = 9999;
+  btn.addEventListener('click', () => {
+    currentLangIndex = (currentLangIndex + 1) % languages.length;
+    updateTranslation();
+  });
+  document.body.appendChild(btn);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  createToggleButton();
+});
