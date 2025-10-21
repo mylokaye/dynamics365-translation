@@ -11,12 +11,12 @@ Add these script tags to your HTML (in this exact order):
 <script src="https://cdn.jsdelivr.net/gh/mylokaye/dynamics365-translation@main/translate.js"></script>
 
 <script>
-  // Poll until functions are available, then run
   function initTranslation() {
     if (typeof translations !== 'undefined' && typeof updateTranslation === 'function') {
+      window.currentLang = detectLanguageFromURL();
       updateTranslation();
     } else {
-      setTimeout(initTranslation, 50); // Check again in 50ms
+      setTimeout(initTranslation, 50);
     }
   }
   
