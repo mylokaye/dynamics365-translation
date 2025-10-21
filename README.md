@@ -7,25 +7,29 @@ Auto-translation script for Dynamics 365 forms supporting EN-US, DE (German), an
 Add these script tags to your HTML (in this exact order):
 
 ```html
-<!-- Load translations.js FIRST, then translate.js -->
-<script src="https://cdn.jsdelivr.net/gh/mylokaye/dynamics365-translation@main/translations.js" defer></script>
-<script src="https://cdn.jsdelivr.net/gh/mylokaye/dynamics365-translation@main/translate.js" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/mylokaye/dynamics365-translation@main/translations.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/mylokaye/dynamics365-translation@main/translate.js"></script>
 
-```
-
-The translation runs automatically on page load. To manually trigger it, you can call:
-```javascript
-updateTranslation();
-```
-```html
 <script>
-  window.addEventListener('load', function() {
-    if (typeof updateTranslation === 'function') {
+  // Poll until functions are available, then run
+  function initTranslation() {
+    if (typeof translations !== 'undefined' && typeof updateTranslation === 'function') {
       updateTranslation();
+    } else {
+      setTimeout(initTranslation, 50); // Check again in 50ms
     }
-  });
+  }
+  
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTranslation);
+  } else {
+    initTranslation();
+  }
 </script>
-</body>
+
+
+
+
 ```
 
 Console test script:
