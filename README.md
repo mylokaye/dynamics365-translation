@@ -11,4 +11,15 @@ Add these script tags to your HTML (in this exact order):
 <script src="https://cdn.jsdelivr.net/gh/mylokaye/dynamics365-translation@81d5290c4f37ecfa55db7656ba34c66633119fa0/translate.js"></script>
 ```
 
+```html
+<script>
+  // Run translation when page loads
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof updateTranslation === 'function') {
+      updateTranslation();
+    }
+  });
+</script>
+```
+
 **Important:** Always use the jsDelivr CDN URLs (`cdn.jsdelivr.net`) as shown above. Do NOT use `raw.githubusercontent.com` URLs, as they serve files with incorrect MIME types and will be blocked by modern browsers.
