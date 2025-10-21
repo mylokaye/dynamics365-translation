@@ -1,4 +1,4 @@
-{
+const translations = {
   "firstName": {
     "EN-US": "First Name",
     "DE": "Vorname",
@@ -69,4 +69,4 @@
     "DE": "Ich verstehe, dass meine persönlichen Daten zum Zweck des Empfangs von E-Mails gemäß Artikel 6(1)(a) der DSGVO verarbeitet werden, wie in der Datenschutzerklärung dargelegt.",
     "ZH": "我理解我的个人数据将根据 GDPR 第 6(1)(a) 条的规定被处理，用于接收电子邮件，如隐私政策中所述。"
   }
-}
+};
