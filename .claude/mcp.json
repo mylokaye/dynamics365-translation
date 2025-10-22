@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "ms-learn": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@microsoft/mcp-server-mslearn"
+      ],
+      "description": "Microsoft Learn documentation access for Dynamics 365 terminology and translations",
+      "env": {}
+    }
+  }
+}
