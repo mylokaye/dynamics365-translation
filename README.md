@@ -16,6 +16,8 @@ Add these script tags to your HTML (in this exact order):
 <script src="https://cdn.jsdelivr.net/gh/mylokaye/dynamics365-translation@main/translations.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/mylokaye/dynamics365-translation@main/translate.js"></script>
 
+<script src="https://rawcdn.githack.com/mylokaye/dynamics365-translation/main/translate.js"></script>
+
 <script>
   function initTranslation() {
     if (typeof translations !== 'undefined' && typeof updateTranslation === 'function') {
