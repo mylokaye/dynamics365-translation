@@ -2,6 +2,12 @@
 
 Auto-translation script for Dynamics 365 forms supporting EN-US, DE (German), and ZH (Chinese) based on URL patterns.
 
+## MS Learn MCP Integration
+
+This project includes Microsoft Learn MCP (Model Context Protocol) server integration for AI-assisted translation development. The MCP server provides access to official Microsoft Learn documentation, ensuring accurate terminology and translations.
+
+See [MCP_SETUP.md](MCP_SETUP.md) for details on how to use the MS Learn MCP server with Claude Code or other MCP-compatible AI assistants.
+
 ## Usage
 
 Add these script tags to your HTML (in this exact order):
